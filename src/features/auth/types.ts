@@ -1,7 +1,3 @@
-export type SignInStackParams = { 
-  SignIn: undefined
-};
-
 export type SignUpStackParams = { 
   InitialStep: undefined
   NameStep: undefined
@@ -11,3 +7,14 @@ export type SignUpStackParams = {
   CreatePasswordStep: undefined
   FinishStep: undefined
 };
+
+export type SignInStackParams = { 
+  SignIn: undefined
+  SignUp: SignUpStackParams
+};
+
+export type AuthStackParams = {
+  Index: undefined
+  SignIn: SignInStackParams
+  SignUp: SignUpStackParams
+}

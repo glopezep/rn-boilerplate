@@ -5,7 +5,7 @@ import SignInScreen from './SignInScreen';
 
 const Stack = createStackNavigator();
 
-function ScreenStack() {
+export default function StackNavigator () {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -19,5 +19,3 @@ function ScreenStack() {
     </Stack.Navigator>
   );
 }
-
-export default ScreenStack;

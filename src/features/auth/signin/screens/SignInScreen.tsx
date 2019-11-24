@@ -2,12 +2,10 @@ import * as React from 'react';
 import {
   View,
   StyleSheet,
-  KeyboardAvoidingView,
   Keyboard,
   TouchableWithoutFeedback,
   Image,
 } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import {
   Container,
   Button,
@@ -51,9 +49,13 @@ function SignInScreen(props: Props) {
             <Item>
               <Input placeholder="Password" />
             </Item>
-            <Button block style={styles.button}>
-              <Text>Log in</Text>
+            <Button
+              block
+              style={styles.button}
+            >
+              <Text>Sign in</Text>
             </Button>
+            
             <Button block transparent>
               <Text>Forgot password?</Text>
             </Button>

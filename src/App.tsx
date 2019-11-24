@@ -1,15 +1,28 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import { NavigationNativeContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import 'react-native-gesture-handler';
 
-import { ScreenStack as AuthScreenStack } from './features/auth';
+import { StackNavigator as AuthStackNavigator } from './features/auth';
+import { TabNavigator as HomeTabNavigator } from './features/home';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationNativeContainer>
-        <AuthScreenStack />
+        <Stack.Navigator
+          initialRouteName="Auth"
+          screenOptions={{
+            headerShown: false
+          }}
+        >
+          <Stack.Screen name="Auth" component={AuthStackNavigator} />
+          <Stack.Screen name="Home" component={HomeTabNavigator} />
+        </Stack.Navigator>
       </NavigationNativeContainer>
     </SafeAreaView>
   );

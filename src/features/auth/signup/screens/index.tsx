@@ -11,7 +11,7 @@ import FinishStepScreen from './FinishStepScreen';
 
 const Stack = createStackNavigator();
 
-function ScreenStack() {
+export default function StackNavigator() {
   return (
     <Stack.Navigator
       initialRouteName="InitialStepScreen"
@@ -50,5 +50,3 @@ function ScreenStack() {
     </Stack.Navigator>
   );
 }
-
-export default ScreenStack

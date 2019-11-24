@@ -3,14 +3,14 @@ import { View, StyleSheet } from 'react-native';
 import { Container, Button, Text, Content } from 'native-base';
 import { NavigationProp, RouteProp } from '@react-navigation/core';
 
-import { LogInStackParams } from '../types';
+import { AuthStackParams } from '../types';
 
 type Props = {
-  navigation: NavigationProp<LogInStackParams, 'Auth'>;
-  route: RouteProp<LogInStackParams, 'Auth'>;
+  navigation: NavigationProp<AuthStackParams, 'Index'>;
+  route: RouteProp<AuthStackParams, 'Index'>;
 };
 
-function AuthScreen(props: Props) {
+function IndexScreen(props: Props) {
   return (
     <Container style={styles.container}>
       <Content
@@ -32,7 +32,7 @@ function AuthScreen(props: Props) {
             block
             light
             onPress={() => props.navigation.navigate('SignIn')}>
-            <Text>Log in</Text>
+            <Text>Sign in</Text>
           </Button>
         </View>
       </Content>
@@ -55,4 +55,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AuthScreen;
+export default IndexScreen;
